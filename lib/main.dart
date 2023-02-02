@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           title: Text('앱임')
             //child: Text('앱임')
         ),
-        body: Container(
+        body: SizedBox(
             child: Text('안녕')
         ),
         bottomNavigationBar: BottomAppBar(
