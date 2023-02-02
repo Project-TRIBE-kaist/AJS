@@ -9,12 +9,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('앱임')
-            //child: Text('앱임')
-        ),
-        body: SizedBox(
-            child: Text('안녕')
+        appBar: AppBar( title: Text('앱임')),
+        body: Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            width: double.infinity, height:50,
+            //color:Colors.blue,
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(10),
+            child: Text('텍스트임'),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black),
+            ),
+          ),
         ),
         bottomNavigationBar: BottomAppBar(
           child: SizedBox(
@@ -26,10 +33,10 @@ class MyApp extends StatelessWidget {
                 Icon(Icons.phone),
                 Icon(Icons.message),
                 Icon(Icons.contact_page),
-            ],
-        ),
+              ],
+            ),
           ),
-        ), //BottomAppBar( child: Text('하단바') ),
+        ), //BottomAppBar
       )
     );
   }
