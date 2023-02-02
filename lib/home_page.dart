@@ -20,6 +20,34 @@ class _HomePageState extends State<HomePage> {
 
   int _selectedIndex = 0;
 
+  static List<Widget> _screens = <Widget>[
+    Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
+      ),
+      child: Column( children:[Text('home임'), Image.asset('dog.png'),], ),
+    ),
+    Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
+      ),
+      child: Column( children:[Text('search임'), Image.asset('dog.png'),], ),
+    ),
+    Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
+      ),
+      child: Column( children:[Text('add임'), Image.asset('dog.png'),], ),
+    ),
+    Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
+      ),
+      child: Column( children:[Text('tribe임'), Image.asset('dog.png'),], ),
+    ),
+    Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
+      ),
+      child: Column( children:[Text('mypage임'), Image.asset('dog.png'),], ),
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,24 +55,9 @@ class _HomePageState extends State<HomePage> {
         title: Text('인스타그램임', style: TextStyle(color: Colors.black) ),
         backgroundColor: Colors.white,
       ),
-      body: Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          width: double.infinity, height:double.infinity,
-          //color:Colors.orangeAccent,
-          //margin: EdgeInsets.all(20),
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black12, width: 2),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children:[
-              Text('텍스트임'),
-              Image.asset('dog.png'),
-            ],
-          ),
-        ),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
