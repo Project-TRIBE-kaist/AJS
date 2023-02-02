@@ -1,9 +1,24 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({
+class HomePage extends StatefulWidget {
+  HomePage({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  List<BottomNavigationBarItem> btmNavItems = [
+    BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+    BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
+    BottomNavigationBarItem(icon: Icon(Icons.add), label: 'add'),
+    BottomNavigationBarItem(icon: Icon(Icons.healing), label: 'tribe'),
+    BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: 'me'),
+  ];
+
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -31,22 +46,22 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: SizedBox(
-          height: 50,
-          child: Row(
-
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(Icons.home),
-              Icon(Icons.search),
-              Icon(Icons.add),
-              Icon(Icons.healing),
-              Icon(Icons.account_circle),
-            ],
-          ),
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: btmNavItems,
+        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.black,
+        currentIndex: _selectedIndex,
+        onTap: _onBtmItmClick,
       ), //BottomAppBar
     );
+  }
+
+  void _onBtmItmClick(int index){
+    //print(index);
+    setState((){
+      _selectedIndex = index;
+    });
   }
 }
