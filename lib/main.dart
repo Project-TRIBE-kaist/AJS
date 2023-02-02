@@ -10,7 +10,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //home: Text('안녕')
       //home: Icon(Icons.shop)
-      home: Image.asset('dog.png')
+      //home: Image.asset('dog.png')
+      home: Center(
+        child: Container( width:50, height:50, color: Colors.blue)
+      )
+          //or SizedBox()
     );
   }
 }
