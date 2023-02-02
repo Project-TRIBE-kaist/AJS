@@ -16,10 +16,19 @@ class HomePage extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         child: Container(
           width: double.infinity, height:double.infinity,
-          color:Colors.orangeAccent,
+          //color:Colors.orangeAccent,
           //margin: EdgeInsets.all(20),
           padding: EdgeInsets.all(10),
-          child: Text('텍스트임'),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black12, width: 2),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:[
+              Text('텍스트임'),
+              Image.asset('dog.png'),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(
