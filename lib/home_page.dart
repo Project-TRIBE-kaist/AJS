@@ -25,22 +25,22 @@ class _HomePageState extends State<HomePage> {
     Container(
       decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
       ),
-      child: Column( children:[Text('home임'), Image.asset('dog.png'),], ),
+      child: Column( children:[Text('home임'), Image.asset('Images/dog.png'),], ),
     ),
     Container(
       decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
       ),
-      child: Column( children:[Text('search임'), Image.asset('dog.png'),], ),
+      child: Column( children:[Text('search임'), Image.asset('Images/dog.png'),], ),
     ),
     Container(
       decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
       ),
-      child: Column( children:[Text('add임'), Image.asset('dog.png'),], ),
+      child: Column( children:[Text('add임'), Image.asset('Images/dog.png'),], ),
     ),
     Container(
       decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
       ),
-      child: Column( children:[Text('tribe임'), Image.asset('dog.png'),], ),
+      child: Column( children:[Text('tribe임'), Image.asset('Images/dog.png'),], ),
     ),
     FeedScreen(),
   ];
