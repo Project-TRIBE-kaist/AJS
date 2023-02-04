@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tribe_v3/feed_screen.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({
@@ -41,20 +42,16 @@ class _HomePageState extends State<HomePage> {
       ),
       child: Column( children:[Text('tribe임'), Image.asset('dog.png'),], ),
     ),
-    Container(
-      decoration: BoxDecoration(border: Border.all(color: Colors.black12, width: 2),
-      ),
-      child: Column( children:[Text('mypage임'), Image.asset('dog.png'),], ),
-    ),
+    FeedScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         title: Text('인스타그램임', style: TextStyle(color: Colors.black) ),
         backgroundColor: Colors.white,
-      ),
+      ), */
       body: IndexedStack(
         index: _selectedIndex,
         children: _screens,
