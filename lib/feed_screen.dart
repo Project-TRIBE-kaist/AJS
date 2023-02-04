@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tribe_v3/widgets/post.dart';
 
 class FeedScreen extends StatelessWidget {
   //const FeedScreen({Key? key}) : super(key: key);
@@ -24,10 +25,5 @@ class FeedScreen extends StatelessWidget {
 
     );
   }
-  Widget feedListBuilder(BuildContext context, int index){
-    return Container(
-      color: Colors.accents[index % Colors.accents.length],
-      height: 100,
-    );
-  }
+  Widget feedListBuilder(BuildContext context, int index){ return Post(index); }
 }
