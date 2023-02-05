@@ -13,7 +13,7 @@ class FeedScreen extends StatelessWidget {
           icon: Image.asset('Images/dog.png'),
           /*Icon( Icons.camera_alt, color: Colors.black87, )*/
         ),
-        middle: Text('Instagram', style: TextStyle(fontFamily: 'VeganStyle', color: Colors.black87)),
+        middle: Text('T r i b e', style: TextStyle(fontFamily: 'VeganStyle', color: Colors.black87)),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
